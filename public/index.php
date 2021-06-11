@@ -1,1 +1,4 @@
-HELLO WORLD
+<?php
+    require_once '../app/bootstrap.php'
+
+?>
