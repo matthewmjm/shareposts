@@ -8,13 +8,13 @@
     class Core {
         // set default values
         protected $currentController = 'Pages';
-        protected $currenMethod = 'index';
+        protected $currentMethod = 'index';
         protected $params = [];
 
-        public function __construct() {
+        public function __construct(){
             // print_r($this->getUrl());
             $url = $this->getUrl();
-            // Look in controllers for first value
+            // Look in controllers for first value (controllers)
             if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
                 // If exists, sets as controller
                 $this->currentController = ucwords($url[0]);
@@ -46,7 +46,7 @@
         
         }
 
-        public function getUrl() {
+        public function getUrl(){
             // echo $_GET['url'];
             if(isset($_GET['url'])){
                 $url = rtrim($_GET['url'], '/');
