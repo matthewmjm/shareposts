@@ -1,1 +1,1 @@
-alert("JavaScript connected");
+console.log("JavaScript connected");
